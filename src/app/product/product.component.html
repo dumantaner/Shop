@@ -1,6 +1,6 @@
 <h3 *ngIf="products; else noProduct ">{{title}}</h3>
 <ng-template #noProduct>
-Bu Kategoride Ürün Yoktur</ng-template>
+Bu Kategoride Ürün Yok</ng-template>
 <div class="row">
 
     <div *ngFor="let product of products" class="card" style="width: 18rem;">
