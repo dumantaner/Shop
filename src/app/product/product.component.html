@@ -1,9 +1,25 @@
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"><strong>Ürün Arama </strong></label>
+    <input 
+    type="email" 
+    class="form-control" 
+    id="exampleFormControlInput1" 
+    placeholder="Ürün Arayınız"
+    [(ngModel)]="filterText"
+    >
+    <small>
+        Şu an <strong class="filterText">{{filterText}}</strong> aradınız
+    </small>
+    
+  </div>
+
 <h3 *ngIf="products; else noProduct ">{{title}}</h3>
 <ng-template #noProduct>
  There is no product in this category !!!!</ng-template>
 <div class="row">
 
-    <div *ngFor="let product of products" class="card" style="width: 18rem;">
+    <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem;">
         <img [src]="product.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{product.name}}</h5>
