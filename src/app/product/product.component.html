@@ -23,9 +23,9 @@
         <img [src]="product.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{product.name}}</h5>
-            <h5 class="card-title">{{product.price | currency:'TRY':true}}</h5>
+            <h5 class="card-title">{{product.price | currency:'₺':true}}</h5>
             <p class="card-text">{{product.description}}</p>
-            <a href="#" class="btn btn-success">{{buy}}</a>
+            <a (click)= "addToCard(product)" class="btn btn-success">{{buy}}</a>
         </div>
     </div>
 
