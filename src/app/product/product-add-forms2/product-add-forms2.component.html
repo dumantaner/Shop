@@ -1,0 +1,11 @@
+<h3>Yeni Ürün Ekle -Reactive</h3>
+<form [formGroup]="productAddForm" (ngSubmit)="add()" class="form-group">
+    <div>
+        <input type="text" id="name" name="name" formControlName="name" class="form-control" placeholder="Ürün Adı"><br>
+        <input type="text" id="description" name="description" formControlName="description" class="form-control" placeholder="Açıklama"><br>
+        <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" class="form-control" placeholder="Fotoğraf Yolu"><br>
+        <input type="text" id="price" name="price" formControlName="price" class="form-control" placeholder="Fiyat"><br>
+        <input type="text" id="categoryId" name="categoryId" formControlName="categoryId" class="form-control" placeholder="Kategori Id">
+    </div>
+
+</form>
