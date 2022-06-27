@@ -19,7 +19,7 @@
  There is no product in this category !!!!</ng-template>
 <div class="row">
 
-    <div *ngFor="let product of products | productFilter:filterText" class="productBox" style="width: 18rem;">
+    <div *ngFor="let product of products | productFilter:filterText" class="productBox" style="width: 18rem">
         <img [src]="product.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{product.name}}</h5>

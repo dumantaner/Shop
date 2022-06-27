@@ -7,7 +7,9 @@ declare let alertify: any;
 
 export class AlertifyService {
 
-  constructor() { }
+  constructor() {
+    this.set('notifier', 'position', 'top-right')
+   }
 
   success(message: string) {
     alertify.success(message)
