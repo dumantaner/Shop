@@ -1,7 +1,15 @@
-.filterText{
+.filterText {
     font-style: italic;
     color: rgb(169, 21, 21);
 }
-.productBox{
+
+.productBox {
     padding: 15px;
+
+}
+
+.card-img-top{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
