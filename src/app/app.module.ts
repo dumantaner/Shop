@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductAddForms1Component } from './product/product-add-forms1/product-add-forms1.component';
 import { ProductAddForms2Component } from './product/product-add-forms2/product-add-forms2.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { AccountService } from './services/account.service';
+import { LoginGuard } from './login/login.guard';
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
     ProductFilterPipe,
     ProductAddForms1Component,
-    ProductAddForms2Component
+    ProductAddForms2Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [AlertifyService],
+  providers: [AlertifyService,AccountService,LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
