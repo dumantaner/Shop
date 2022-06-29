@@ -26,6 +26,7 @@
             <h5 class="card-title">{{product.price | currency:'₺':true}}</h5>
             <p class="card-text">{{product.description}}</p>
             <a (click)= "addToCard(product)" class="btn btn-success">{{buy}}</a>
+            <a (click)= "deleteToCard(product)" class="btn btn-danger">{{delete}}</a>
         </div>
     </div>
 
