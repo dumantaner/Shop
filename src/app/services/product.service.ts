@@ -20,6 +20,9 @@ export class ProductService {
     if (categoryId) {
       newPath = newPath + "?categoryId=" + categoryId
     }
+   
+   
+
 
 
     return this.http.get<Product[]>(newPath).pipe(
@@ -41,6 +44,13 @@ export class ProductService {
       catchError(this.handleError)
     );
   }
+
+
+
+   
+
+
+
   handleError(err: HttpErrorResponse) {
     let errorMessage = ''
     if (err.error instanceof ErrorEvent) {
